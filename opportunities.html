@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<s>
+<body>
 
     <header class="navbar">
 
@@ -36,13 +36,13 @@
                 <a href="signup.html" class="signup-btn">Sign Up</a>
             </div>
 
-            <div class="user-profile-menu" id="logged-in-ui">
+            <div class="user-profile-menu" id="logged-in-ui" style="display: none;">
                 <div class="profile-trigger" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
                     <span id="user-display-name" style="font-weight: 600; font-size: 0.95rem;">User</span>
                     <i class="fa-solid fa-circle-user" style="font-size: 1.8rem; color: #8b7fff;"></i>
                     <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; opacity: 0.7;"></i>
                 </div>
-                
+
                 <div class="profile-dropdown" id="profile-dropdown-menu" style="display: none;">
                     <a href="#" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
                 </div>
@@ -53,36 +53,36 @@
 
     <!-- Main Container -->
     <div class="dashboard-container">
-        
+
         <!-- Sidebar Filters -->
         <aside class="sidebar-filters">
             <h3><i class="fa-solid fa-sliders"></i> Filter Work</h3>
-            
+
             <div class="filter-group">
                 <label>Category</label>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-development" checked>
-                    <label for="cat-development">Development & Tech</label>
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Development & Tech</label>
                 </div>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-design">
-                    <label for="cat-design">Design & Creative</label>
+                    <input type="checkbox" id="hourly">
+                    <label for="hourly">Design & Creative</label>
                 </div>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-sales" checked>
-                    <label for="cat-sales">Sales & Marketing</label>
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Sales & Marketing</label>
                 </div>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-writing" checked>
-                    <label for="cat-writing">Writing & Translation</label>
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Writing & Translation</label>
                 </div>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-admin" checked>
-                    <label for="cat-admin">Admin & Customer Support</label>
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Admin & Customer Support</label>
                 </div>
                 <div class="checkbox-option">
-                    <input type="checkbox" id="cat-finance" checked>
-                    <label for="cat-finance">Finance & Legal</label>
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Finance & Legal</label>
                 </div>
             </div>
 
@@ -114,7 +114,7 @@
 
         <!-- Feed Section -->
         <main class="opportunities-feed">
-            
+
             <!-- Search Architecture Block -->
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -178,6 +178,5 @@
         </main>
     </div>
 <script src="navbar.js"></script>
-</script> src="opportunities.js"></script>
 </body>
 </html>
