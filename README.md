@@ -1,141 +1,147 @@
 # YouthConnect
 
-YouthConnect is a lightweight front-end web project designed to help young people discover local events, resources, workshops, and peer groups. Built with HTML, CSS, and JavaScript, the project is easy to run, customize, and expand.
+YouthConnect is a youth-focused web platform designed to connect young people with opportunities, resources, events, and career growth tools in one accessible space. The project aims to create a supportive digital community where users can explore internships, workshops, jobs, learning resources, and networking opportunities.
+
+---
 
 ## Features
 
-* Browse curated local events and workshops
-* Search and filter opportunities by category
-* Responsive, mobile-first design
-* Simple and customizable interface
+- 🔐 User authentication (Sign Up & Login)
+- 👤 Dynamic user navigation/profile display
+- 💼 Opportunities and job listings
+- 📚 Resource sharing section
+- 🎨 Responsive modern UI design
+- 📱 Mobile-friendly layout
+- ⚡ Interactive JavaScript functionality
+- 🌍 Community-focused experience
+
+---
 
 ## Tech Stack
 
-* HTML
-* CSS
-* JavaScript
+- HTML5
+- CSS3
+- JavaScript
+- Git & GitHub
+
+---
+
+## Project Structure
+
+```bash
+YouthConnect/
+│
+├── index.html
+├── login.html
+├── signup.html
+├── opportunities.html
+├── resources.html
+│
+├── css/
+│   ├── style.css
+│   ├── navbar.css
+│   └── opportunities.css
+│
+├── js/
+│   ├── script.js
+│   ├── navbar.js
+│   └── opportunities.js
+│
+└── assets/
+    ├── images/
+    └── icons/
+```
+
+---
 
 ## Getting Started
 
-No build tools or installation steps are required.
-
-### Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Zaarah-Okkers/YouthConnect.git
 ```
 
-### Run the Project
-
-Open `index.html` directly in your browser, or run a local server:
+### 2. Open the project folder
 
 ```bash
-python -m http.server 8000
+cd YouthConnect
 ```
 
-Then open:
+### 3. Run the project
+
+Open `index.html` in your browser.
+
+You can also use VS Code Live Server for a smoother development experience.
+
+---
+
+## Collaborators
+
+This project was collaboratively developed by:
+
+- **Zaarah Okkers**
+- **Khanya**
+- **Nhlakanipho**
+- **Matthew**
+- **Ishma-iel**
+
+---
+
+## Git Workflow
+
+### Create a new branch
 
 ```bash
-http://localhost:8000
+git checkout -b branch-name
 ```
 
-## Project Structure
+### Pull latest changes
 
-```plaintext
-YouthConnect/
-│
-├── index.html
-├── css/
-├── js/
-├── assets/
-└── README.md
+```bash
+git pull origin main
 ```
 
-## Customization
+### Push changes
 
-* Update styles inside the `css/` folder
-* Edit or create pages in the root directory
-* Add or modify functionality in the `js/` folder
+```bash
+git add .
+git commit -m "Your message"
+git push origin branch-name
+```
+
+---
+
+## Future Improvements
+
+- Backend integration
+- Database support
+- User dashboards
+- Real-time chat/community forums
+- Event registration system
+- Saved opportunities feature
+- Dark mode toggle
+
+---
 
 ## Contributing
 
-Contributions are welcome.
+Contributions, improvements, and suggestions are welcome.
 
 1. Fork the repository
-2. Create a feature branch
-
-```bash
-git checkout -b feature-name
-```
-
+2. Create your feature branch
 3. Commit your changes
-4. Push your branch
-5. Open a pull request
+4. Push to the branch
+5. Open a Pull Request
 
-Please use clear commit messages and include a description of your changes.
+---
 
 ## License
 
-This project is licensed under the MIT License.
-
-## Contact
-
-Maintainer: Zaarah Okkers
-GitHub: https://github.com/Zaarah-Okkers
+This project is for educational and development purposes.
 
 ---
 
-# Team Contributions
+## Repository
 
-### Zaarah Okkers — Project Lead
-
-* Overall project design
-* HTML and CSS layout
-* JavaScript interactivity and filtering
-* Documentation
-* Repository maintenance
-
-### Contributors
-
-Add contributors here with their role and contributions.
-
-Example:
-
-* Jane Developer (@janedev) — Event filtering and category search
-* Alex Designer (@alexd) — Responsive design improvements and illustrations
-
----
-
-# Project Motivation
-
-YouthConnect was created to make it easier for young people to discover local opportunities such as events, workshops, volunteer programs, and peer communities in one accessible platform.
-
-The project aims to:
-
-* Improve access to local youth opportunities
-* Provide a user-friendly experience on both desktop and mobile devices
-* Create a simple codebase that is easy to extend and maintain
-
----
-
-# Implementation Details
-
-YouthConnect is a static front-end application.
-
-* HTML handles the structure and content
-* CSS manages layout and responsiveness
-* JavaScript powers filtering and interactive functionality
-
-Content can be:
-
-* Added directly in HTML
-* Loaded from local JSON files
-* Connected to an external API or backend service
-
-## Suggested Future Improvements
-
-* Backend integration using Firebase or Supabase
-* User authentication and saved profiles
-* Improved accessibility and keyboard navigation
-* Search optimization and advanced filtering
-* Automated testing with Jest or Cypress
+[YouthConnect GitHub Repository](https://github.com/Zaarah-Okkers/YouthConnect.git)
