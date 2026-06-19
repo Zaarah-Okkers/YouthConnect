@@ -1,0 +1,271 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.2rem 6%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.logo h1 a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #ff7eb3,
+        #8b7fff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    cursor: pointer;
+}
+
+.logo h1 {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #ff7eb3,
+        #8b7fff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    cursor: pointer;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2a2a2a;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff7eb3;
+}
+
+/* AUTH BUTTONS */
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn,
+.signup-btn {
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #ff7eb3,
+        #8b7fff
+    );
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 8px 30px rgba(255, 126, 179, 0.15);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .login-btn,
+    .signup-btn {
+        padding: 10px 18px;
+    }
+}
+
+.nav-links .active {
+    color: var(--pink-main);
+}
+
+.profile-menu {
+    position: relative;
+}
+
+.profile-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: var(--gradient);
+    color: white;
+
+    font-size: 1.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--shadow);
+}
+
+.profile-toggle:hover {
+    transform: translateY(-2px);
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 60px;
+
+    width: 220px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    overflow: hidden;
+}
+
+.dropdown a,
+.dropdown button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 20px;
+
+    border: none;
+    background: none;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+    background: #f8f8f8;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Container management */
+.auth-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Floating overlay drop menu framework adjustments */
+.profile-dropdown {
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #f1d4e4; /* Matching your custom design system variable */
+    border-radius: 12px;
+    min-width: 160px;
+    box-shadow: 0px 8px 24px rgba(255, 126, 179, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.profile-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.profile-dropdown a:hover {
+    background-color: #fff5f9;
+    color: #ff7eb3;
+}
+
