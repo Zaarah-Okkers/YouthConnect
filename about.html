@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About YouthConnect</title>
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="navbar.css">
+    <!-- FontAwesome Icons (Mirrored from opportunities page for the navbar elements) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h1>YouthConnect</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-wrapper">
+            <!-- State A: Logged Out UI -->
+            <div class="auth-buttons" id="logged-out-ui">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+
+            <!-- State B: Logged In User UI (Managed by navbar.js) -->
+            <div class="user-profile-menu" id="logged-in-ui" style="display: none;">
+                <div class="profile-trigger" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <span id="user-display-name" style="font-weight: 600; font-size: 0.95rem;">User</span>
+                    <i class="fa-solid fa-circle-user" style="font-size: 1.8rem; color: #8b7fff;"></i>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                </div>
+                
+                <div class="profile-dropdown" id="profile-dropdown-menu" style="display: none;">
+                    <a href="#" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero" id="about">
+            <div class="about-hero-copy">
+                <span class="eyebrow">YouthConnect</span>
+                <h1>Empowering a new generation of freelancers.</h1>
+                <p>YouthConnect is a youth-first freelance marketplace that helps emerging talent build experience, earn confidently, and connect with clients who value creativity, growth, and reliability.</p>
+                <div class="hero-actions">
+                    <a href="home.html" class="primary-btn">Visit Home Page</a>
+                </div>
+            </div>
+
+            <aside class="hero-highlight">
+                <div class="hero-card">
+                    <h3>A professional platform for young talent</h3>
+                    <p>Every feature is carefully crafted to reduce friction, protect creators, and deliver meaningful freelance opportunities that support long-term careers.</p>
+                </div>
+                <div class="stats-group">
+                    <div class="stat-pill">
+                        <strong>5+</strong>
+                        <span>Founding team members</span>
+                    </div>
+                    <div class="stat-pill">
+                        <strong>100+</strong>
+                        <span>Early freelancers onboarded</span>
+                    </div>
+                    <div class="stat-pill">
+                        <strong>50+</strong>
+                        <span>Project categories available</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="team" id="team">
+            <div class="section-heading">
+                <h2>Meet the team</h2>
+                <p>The people behind YouthConnect are focused on building a strong platform and a supportive experience for young freelancers.</p>
+            </div>
+
+            <div class="team-grid">
+                <article class="profile-card card">
+                    <img src="matt.jpg" alt="Founder of YouthConnect">
+                    <h3>Matthew Adriaanse</h3>
+                    <p>Leading the vision to make freelance work accessible for young people.</p>
+                </article>
+                <article class="profile-card card">
+                    <img src="zara.jpg" alt="Product Lead at YouthConnect">
+                    <h3>Zaraah Okkers</h3>
+                    <p>Designs intuitive tools and features that help talent thrive.</p>
+                </article>
+                <article class="profile-card card">
+                    <img src="nhlaks.jpg" alt="Community Lead at YouthConnect">
+                    <h3>Nhlakanipho Luthuli</h3>
+                    <p>Builds support, mentorship, and learning programs for our members.</p>
+                </article>
+                <article class="profile-card card">
+                    <img src="khanya.jpg" alt="Growth Lead at YouthConnect">
+                    <h3>Khanya Gcilitshana</h3>
+                    <p>Expands opportunities and partnerships for freelancers and clients.</p>
+                </article>
+                <article class="profile-card card">
+                    <img src="ish.png" alt="Support Lead at YouthConnect">
+                    <h3>Ishma-iel Gray</h3>
+                    <p>Ensures every member receives prompt help and a safe experience.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="section-heading">
+                <h2>What YouthConnect delivers</h2>
+                <p>We combine a trusted marketplace, career support, and secure workflows so young professionals can focus on growth, not complexity.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="card">
+                    <h3>Built for early career success</h3>
+                    <p>YouthConnect removes barriers to freelancing by matching youth with projects that build skills, confidence, and a professional portfolio.</p>
+
+                    <ul class="feature-list">
+                        <li><strong>Discover projects:</strong> Curated opportunities across design, tech, writing, marketing, and community work.</li>
+                        <li><strong>Grow skills:</strong> Access mentorship, feedback, and career guidance designed for youth.</li>
+                        <li><strong>Work with confidence:</strong> Secure payments and transparent terms keep every engagement fair.</li>
+                        <li><strong>Build momentum:</strong> Turn first gigs into long-term career pathways through consistent support.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Why our approach matters</h3>
+                    <p>Young freelancers need more than a marketplace; they need a safe, supportive environment that helps them move from early projects to lasting opportunity.</p>
+
+                    <ul class="feature-list simple-list">
+                        <li><strong>Curated matching</strong> to align talent with projects that fit growing experience.</li>
+                        <li><strong>Transparent support</strong> so every member understands the process and feels confident taking on work.</li>
+                        <li><strong>Community growth</strong> through shared learning, mentorship, and a network of peers and clients.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="card">
+                <h2>Our Mission</h2>
+                <p>Empower young professionals with a trusted freelance platform that connects them to real work, real pay, and real learning.</p>
+            </div>
+            <div class="card">
+                <h2>Our Vision</h2>
+                <p>Become the most respected youth-focused marketplace for freelancers who want more than a gig — they want a career pathway.</p>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="section-heading">
+                <h2>How YouthConnect helps the future</h2>
+                <p>Our platform is designed to support the values that matter to youth and businesses alike: growth, trust, access, and long-term opportunity.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="card">
+                    <h3>Skill growth</h3>
+                    <p>Deliver training, workshops, and project feedback that prepares youth for tomorrow’s economy.</p>
+                </div>
+                <div class="card">
+                    <h3>Economic access</h3>
+                    <p>Open up new income opportunities through freelance work with fair fees and transparent terms.</p>
+                </div>
+                <div class="card">
+                    <h3>Trusted community</h3>
+                    <p>Create a supportive network where youth can collaborate, learn, and navigate freelance careers together.</p>
+                </div>
+                <div class="card">
+                    <h3>Future pathways</h3>
+                    <p>Connect young talent with mentors, internships, and career-building opportunities beyond one-off jobs.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+           <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>For Clients</h3>
+                <a href="#">Post a Project</a>
+                <a href="#">Browse Freelancers</a>
+                <a href="#">How Hiring Works</a>
+                <a href="#">Student Talent Marketplace</a>
+                <a href="#">Enterprise Solutions</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Freelancers</h3>
+                <a href="#">Find Work</a>
+                <a href="#">Create Profile</a>
+                <a href="#">Skill Development</a>
+                <a href="#">Freelance Tips</a>
+                <a href="#">Success Stories</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Our Mission</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Socials</h3>
+                <a href="#">Facebook</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a> 
+                <a href="#">X</a> 
+            </div>
+        </div>
+
+        <div class="footer-brand">
+            <a href="https://ibb.co/zVdP4JpR"><img src="https://i.ibb.co/fdJrxvfp/Chat-GPT-Image-Jun-17-2026-10-28-59-AM.png" alt="YouthConnect Brand Logo" border="0"></a>
+            <h3>YouthConnect</h3>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 YouthConnect. All rights reserved.</p>
+        </div>
+    
+        </footer>
+    </main>
+
+    <!-- Script placed safely outside of main component wrapper to prevent execution delays -->
+    <script src="navbar.js"></script>
+</body>
+</html>
