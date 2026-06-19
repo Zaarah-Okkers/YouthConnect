@@ -1,369 +1,182 @@
-// =========================
-// OPPORTUNITIES DATA
-// =========================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Opportunities | Freelance Marketplace</title>
+    <link rel="stylesheet" href="opportunities.css">
+    <link rel="stylesheet" href="navbar.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-const opportunities = [
-  {
-    id: 1,
-    title: "Full-Stack Web App using React & Node.js",
-    category: "Development & Tech",
-    experience: "Intermediate",
-    budget: 4500,
-    posted: "12 minutes ago",
-    location: "Remote",
-    description:
-      "Build and maintain a modern social marketplace platform using React and Node.js.",
-    tags: ["React", "Node.js", "REST API", "MongoDB"],
-    featured: true,
-  },
+    <header class="navbar">
 
-  {
-    id: 2,
-    title: "UI/UX Designer for FinTech Startup",
-    category: "Design & Creative",
-    experience: "Expert / Leader",
-    budget: 6200,
-    posted: "1 hour ago",
-    location: "Worldwide",
-    description:
-      "Create beautiful mobile-first interfaces for a growing fintech startup.",
-    tags: ["Figma", "UI Design", "Branding"],
-    featured: false,
-  },
-
-  {
-    id: 3,
-    title: "Junior Content Writer",
-    category: "Writing & Translation",
-    experience: "Entry Level",
-    budget: 900,
-    posted: "2 hours ago",
-    location: "Remote",
-    description:
-      "Write blog posts and social media content for startup businesses.",
-    tags: ["SEO", "Writing", "Blogging"],
-    featured: false,
-  },
-
-  {
-    id: 4,
-    title: "Social Media Manager",
-    category: "Sales & Marketing",
-    experience: "Intermediate",
-    budget: 2500,
-    posted: "3 hours ago",
-    location: "Hybrid",
-    description:
-      "Manage Instagram, TikTok and Facebook campaigns for fashion brands.",
-    tags: ["Instagram", "TikTok", "Marketing"],
-    featured: false,
-  },
-
-  {
-    id: 5,
-    title: "Virtual Assistant",
-    category: "Admin & Customer Support",
-    experience: "Entry Level",
-    budget: 1200,
-    posted: "5 hours ago",
-    location: "Remote",
-    description:
-      "Help manage emails, bookings and customer communication.",
-    tags: ["Admin", "Customer Support", "Scheduling"],
-    featured: false,
-  },
-
-  {
-    id: 6,
-    title: "Mobile App Developer",
-    category: "Development & Tech",
-    experience: "Expert / Leader",
-    budget: 8500,
-    posted: "1 day ago",
-    location: "Remote",
-    description:
-      "Develop cross-platform mobile apps using Flutter and Firebase.",
-    tags: ["Flutter", "Firebase", "Mobile Apps"],
-    featured: true,
-  },
-
-  {
-    id: 7,
-    title: "Graphic Designer",
-    category: "Design & Creative",
-    experience: "Intermediate",
-    budget: 2000,
-    posted: "1 day ago",
-    location: "Remote",
-    description:
-      "Create posters, social media content and brand kits.",
-    tags: ["Photoshop", "Illustrator", "Canva"],
-    featured: false,
-  },
-
-  {
-    id: 8,
-    title: "Customer Support Agent",
-    category: "Admin & Customer Support",
-    experience: "Entry Level",
-    budget: 1500,
-    posted: "2 days ago",
-    location: "Worldwide",
-    description:
-      "Provide live chat and email support for online customers.",
-    tags: ["Communication", "Support", "CRM"],
-    featured: false,
-  },
-];
-
-// =========================
-// DOM ELEMENTS
-// =========================
-
-const searchInput = document.querySelector(".search-box input");
-
-const budgetSlider = document.querySelector(".budget-slider");
-
-const opportunitiesFeed =
-  document.querySelector(".opportunities-feed");
-
-const opportunitiesContainer =
-  document.createElement("div");
-
-opportunitiesContainer.classList.add(
-  "opportunities-container"
-);
-
-const feedHeader =
-  document.querySelector(".feed-header");
-
-feedHeader.insertAdjacentElement(
-  "afterend",
-  opportunitiesContainer
-);
-
-// Remove old hardcoded cards
-document
-  .querySelectorAll(".opportunity-card")
-  .forEach((card) => card.remove());
-
-const totalCountDisplay =
-  document.querySelector(".feed-header h2");
-
-// =========================
-// FILTER STATE
-// =========================
-
-const filters = {
-  search: "",
-  maxBudget: 10000,
-};
-
-// =========================
-// RENDER FUNCTION
-// =========================
-
-function renderJobs(jobs) {
-  opportunitiesContainer.innerHTML = "";
-
-  totalCountDisplay.textContent =
-    `Open Opportunities (${jobs.length})`;
-
-  if (jobs.length === 0) {
-    opportunitiesContainer.innerHTML = `
-      <p style="
-        padding:20px;
-        background:white;
-        border-radius:20px;
-      ">
-        No Results Found. Try adjusting your search or budget filter.
-      </p>
-    `;
-    return;
-  }
-
-  jobs.forEach((job) => {
-    const article =
-      document.createElement("article");
-
-    article.className =
-      `opportunity-card ${
-        job.featured ? "featured" : ""
-      }`;
-
-    article.innerHTML = `
-      <div class="card-top">
-        <div>
-          ${
-            job.featured
-              ? `
-            <span class="badge-featured">
-              <i class="fa-solid fa-star"></i>
-              Featured
-            </span>
-          `
-              : ""
-          }
-
-          <h3 class="job-title">
-            ${job.title}
-          </h3>
-
-          <p class="job-meta">
-            Posted ${job.posted}
-            &bull;
-            <i class="fa-solid fa-location-dot"></i>
-            ${job.location}
-          </p>
+        <div class="logo">
+            <h1>YouthConnect</h1>
         </div>
 
-        <div class="save-icon">
-          <i class="fa-regular fa-bookmark"></i>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="opportunities.html" class="active">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-wrapper">
+            <div class="auth-buttons" id="logged-out-ui">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+
+            <div class="user-profile-menu" id="logged-in-ui" style="display: none;">
+                <div class="profile-trigger" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <span id="user-display-name" style="font-weight: 600; font-size: 0.95rem;">User</span>
+                    <i class="fa-solid fa-circle-user" style="font-size: 1.8rem; color: #8b7fff;"></i>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                </div>
+
+                <div class="profile-dropdown" id="profile-dropdown-menu" style="display: none;">
+                    <a href="#" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <p class="job-description">
-        ${job.description}
-      </p>
+    </header>
 
-      <div class="job-tags">
-        ${job.tags
-          .map(
-            (tag) => `<span>${tag}</span>`
-          )
-          .join("")}
-      </div>
+    <!-- Main Container -->
+    <div class="dashboard-container">
 
-      <div class="card-footer">
-        <span class="job-budget">
-          Est. Budget:
-          <strong>
-            $${job.budget.toLocaleString()}
-          </strong>
-        </span>
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <h3><i class="fa-solid fa-sliders"></i> Filter Work</h3>
 
-        <button class="btn-apply">
-          Apply Now
-        </button>
-      </div>
-    `;
+            <div class="filter-group">
+                <label>Category</label>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Development & Tech</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="hourly">
+                    <label for="hourly">Design & Creative</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Sales & Marketing</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Writing & Translation</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Admin & Customer Support</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="fixed" checked>
+                    <label for="fixed">Finance & Legal</label>
+                </div>
+            </div>
 
-    opportunitiesContainer.appendChild(
-      article
-    );
-  });
+            <div class="filter-group">
+                <label>Experience Level</label>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="entry">
+                    <label for="entry">Entry Level</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="inter" checked>
+                    <label for="inter">Intermediate</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="expert" checked>
+                    <label for="expert">Expert / Leader</label>
+                </div>
+            </div>
 
-  addButtonFunctions();
-}
+            <div class="filter-group">
+                <label>Est. Budget</label>
+                <input type="range" class="budget-slider" min="100" max="10000" step="500" value="5000">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
+                    <span>$100</span>
+                    <span>$10,000+</span>
+                </div>
+            </div>
+        </aside>
 
-// =========================
-// FILTER FUNCTION
-// =========================
+        <!-- Feed Section -->
+        <main class="opportunities-feed">
 
-function applyFilters() {
-  const filtered =
-    opportunities.filter((job) => {
-      const matchesSearch =
-        job.title
-          .toLowerCase()
-          .includes(filters.search) ||
-        job.description
-          .toLowerCase()
-          .includes(filters.search) ||
-        job.tags.some((tag) =>
-          tag
-            .toLowerCase()
-            .includes(filters.search)
-        );
+            <!-- Search Architecture Block -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search for matching gigs, skills, or tech stacks...">
+                <button class="btn-search">Search</button>
+            </div>
 
-      const matchesBudget =
-        job.budget <= filters.maxBudget;
+            <div class="feed-header">
+                <h2>Open Opportunities (2,480)</h2>
+                <span class="sort-badge">Most Recent <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
 
-      return (
-        matchesSearch &&
-        matchesBudget
-      );
-    });
+            <!-- Job Card 1 -->
+            <article class="opportunity-card featured">
+                <div class="card-top">
+                    <div>
+                        <span class="badge-featured"><i class="fa-solid fa-star"></i> Featured</span>
+                        <h3 class="job-title">Full-Stack Web App using React & Node.js</h3>
+                        <p class="job-meta">Posted 12 minutes ago &bull; <i class="fa-solid fa-location-dot"></i> Remote</p>
+                    </div>
+                    <div class="save-icon"><i class="fa-regular fa-bookmark"></i></div>
+                </div>
+                <p class="job-description">
+                    We are building a vibrant, aesthetic social marketplace and need an experienced developer to architect our frontend interfaces. Experience using beautiful layouts and robust state management is required...
+                </p>
+                <div class="job-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>UI/UX Architecture</span>
+                    <span>REST API</span>
+                </div>
+                <div class="card-footer">
+                    <span class="job-budget">Est. Budget: <strong>$4,500</strong></span>
+                    <button class="btn-apply">Apply Now</button>
+                </div>
+            </article>
 
-  renderJobs(filtered);
-}
+            <!-- Job Card 2 -->
+            <article class="opportunity-card">
+                <div class="card-top">
+                    <div>
+                        <h3 class="job-title">UI/UX Brand Identity Designer for FinTech Startup</h3>
+                        <p class="job-meta">Posted 2 hours ago &bull; <i class="fa-solid fa-location-dot"></i> Worldwide</p>
+                    </div>
+                    <div class="save-icon"><i class="fa-solid fa-bookmark" style="color: var(--pink-main);"></i></div>
+                </div>
+                <p class="job-description">
+                    Seeking a visionary designer to craft pitch decks, typography systems, and a complete high-fidelity UI design framework for a mobile payment platform. Must love playful yet clean designs...
+                </p>
+                <div class="job-tags">
+                    <span>Figma</span>
+                    <span>Brand Strategy</span>
+                    <span>Mobile App Design</span>
+                </div>
+                <div class="card-footer">
+                    <span class="job-budget">Hourly: <strong>$45 - $70/hr</strong></span>
+                    <button class="btn-apply">Apply Now</button>
+                </div>
+            </article>
 
-// =========================
-// EVENT LISTENERS
-// =========================
-
-// Search
-searchInput.addEventListener(
-  "input",
-  (e) => {
-    filters.search =
-      e.target.value.toLowerCase();
-
-    applyFilters();
-  }
-);
-
-// Budget slider
-budgetSlider.addEventListener(
-  "input",
-  (e) => {
-    filters.maxBudget =
-      Number(e.target.value);
-
-    applyFilters();
-  }
-);
-
-// =========================
-// BUTTON FUNCTIONS
-// =========================
-
-function addButtonFunctions() {
-  // Apply buttons
-  document
-    .querySelectorAll(".btn-apply")
-    .forEach((button) => {
-      button.addEventListener(
-        "click",
-        () => {
-          alert(
-            "Application submitted successfully 🎉"
-          );
-        }
-      );
-    });
-
-  // Bookmark buttons
-  document
-    .querySelectorAll(".save-icon")
-    .forEach((icon) => {
-      icon.addEventListener(
-        "click",
-        () => {
-          const i =
-            icon.querySelector("i");
-
-          i.classList.toggle(
-            "fa-regular"
-          );
-
-          i.classList.toggle(
-            "fa-solid"
-          );
-
-          i.style.color =
-            i.classList.contains(
-              "fa-solid"
-            )
-              ? "#ff7eb3"
-              : "";
-        }
-      );
-    });
-}
-
-// =========================
-// INITIAL LOAD
-// =========================
-
-applyFilters();
+        </main>
+    </div>
+<script src="navbar.js"></script>
+</body>
+</html>
