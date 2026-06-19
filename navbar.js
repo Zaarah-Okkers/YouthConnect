@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", () => {
   const loggedOutUI = document.getElementById("logged-out-ui");
   const loggedInUI = document.getElementById("logged-in-ui");
@@ -108,4 +107,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
->>>>>>> origin/khanya-dev
