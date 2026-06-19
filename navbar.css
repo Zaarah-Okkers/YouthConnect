@@ -61,7 +61,20 @@
 
     cursor: pointer;
 }
+.hero img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 /* NAV LINKS */
 
 .nav-links {
