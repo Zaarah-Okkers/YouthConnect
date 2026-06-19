@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Opportunities | Freelance Marketplace</title>
+    <link rel="stylesheet" href="opportunities.css">
+    <link rel="stylesheet" href="navbar.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <h1>YouthConnect</h1>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="opportunities.html" class="active">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-wrapper">
+            <div class="auth-buttons" id="logged-out-ui">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+
+            <div class="user-profile-menu" id="logged-in-ui">
+                <div class="profile-trigger" style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <span id="user-display-name" style="font-weight: 600; font-size: 0.95rem;">User</span>
+                    <i class="fa-solid fa-circle-user" style="font-size: 1.8rem; color: #8b7fff;"></i>
+                    <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; opacity: 0.7;"></i>
+                </div>
+                
+                <div class="profile-dropdown" id="profile-dropdown-menu" style="display: none;">
+                    <a href="#" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Filters -->
+        <aside class="sidebar-filters">
+            <h3><i class="fa-solid fa-sliders"></i> Filter Work</h3>
+            
+            <div class="filter-group">
+                <label>Category</label>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-development" checked>
+                    <label for="cat-development">Development & Tech</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-design">
+                    <label for="cat-design">Design & Creative</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-sales" checked>
+                    <label for="cat-sales">Sales & Marketing</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-writing" checked>
+                    <label for="cat-writing">Writing & Translation</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-admin" checked>
+                    <label for="cat-admin">Admin & Customer Support</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="cat-finance" checked>
+                    <label for="cat-finance">Finance & Legal</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Experience Level</label>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="entry">
+                    <label for="entry">Entry Level</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="inter" checked>
+                    <label for="inter">Intermediate</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="expert" checked>
+                    <label for="expert">Expert / Leader</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Est. Budget</label>
+                <input type="range" class="budget-slider" min="100" max="10000" step="500" value="5000">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
+                    <span>$100</span>
+                    <span>$10,000+</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Feed Section -->
+        <main class="opportunities-feed">
+            
+            <!-- Search Architecture Block -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search for matching gigs, skills, or tech stacks...">
+                <button class="btn-search">Search</button>
+            </div>
+
+            <div class="feed-header">
+                <h2>Open Opportunities (2,480)</h2>
+                <span class="sort-badge">Most Recent <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+
+            <!-- Job Card 1 -->
+            <article class="opportunity-card featured">
+                <div class="card-top">
+                    <div>
+                        <span class="badge-featured"><i class="fa-solid fa-star"></i> Featured</span>
+                        <h3 class="job-title">Full-Stack Web App using React & Node.js</h3>
+                        <p class="job-meta">Posted 12 minutes ago &bull; <i class="fa-solid fa-location-dot"></i> Remote</p>
+                    </div>
+                    <div class="save-icon"><i class="fa-regular fa-bookmark"></i></div>
+                </div>
+                <p class="job-description">
+                    We are building a vibrant, aesthetic social marketplace and need an experienced developer to architect our frontend interfaces. Experience using beautiful layouts and robust state management is required...
+                </p>
+                <div class="job-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>UI/UX Architecture</span>
+                    <span>REST API</span>
+                </div>
+                <div class="card-footer">
+                    <span class="job-budget">Est. Budget: <strong>$4,500</strong></span>
+                    <button class="btn-apply">Apply Now</button>
+                </div>
+            </article>
+
+            <!-- Job Card 2 -->
+            <article class="opportunity-card">
+                <div class="card-top">
+                    <div>
+                        <h3 class="job-title">UI/UX Brand Identity Designer for FinTech Startup</h3>
+                        <p class="job-meta">Posted 2 hours ago &bull; <i class="fa-solid fa-location-dot"></i> Worldwide</p>
+                    </div>
+                    <div class="save-icon"><i class="fa-solid fa-bookmark" style="color: var(--pink-main);"></i></div>
+                </div>
+                <p class="job-description">
+                    Seeking a visionary designer to craft pitch decks, typography systems, and a complete high-fidelity UI design framework for a mobile payment platform. Must love playful yet clean designs...
+                </p>
+                <div class="job-tags">
+                    <span>Figma</span>
+                    <span>Brand Strategy</span>
+                    <span>Mobile App Design</span>
+                </div>
+                <div class="card-footer">
+                    <span class="job-budget">Hourly: <strong>$45 - $70/hr</strong></span>
+                    <button class="btn-apply">Apply Now</button>
+                </div>
+            </article>
+
+        </main>
+    </div>
+<script src="navbar.js"></script>
+</body>
+</html>
