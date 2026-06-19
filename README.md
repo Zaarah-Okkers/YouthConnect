@@ -64,3 +64,49 @@ This project is licensed under the MIT License. See `LICENSE` for details (creat
 Maintainer: Zaarah Okkers — https://github.com/Zaarah-Okkers
 
 If you want a different README style or additional sections (screenshots, demo link, API docs), tell me what to include and I’ll update it.
+
+---
+
+## Who did what
+
+- Zaarah Okkers (Project lead) — overall project design, HTML/CSS layout, JavaScript for filtering and interactivity, documentation, and repository maintenance.
+- Contributors — If others contribute, add their name, GitHub handle, and a short bullet list of what they implemented (example below):
+  - Jane Developer (@janedev) — added event filtering by date and category.
+  - Alex Designer (@alexd) — improved responsive layout and provided illustrations.
+
+To add yourself to this list, open a pull request that updates this section with your name and a short description of your contribution.
+
+## Why (project motivation)
+
+YouthConnect was created to make it easier for young people to find local opportunities — events, workshops, volunteer roles, and peer groups — without needing to wade through large, general-purpose platforms. The goals are:
+
+- Reduce friction for discovering local, youth-oriented activities.
+- Provide a simple, accessible interface that works on low-powered devices and mobile browsers.
+- Offer an easy-to-extend codebase so community members and organizers can contribute content and features.
+
+## How (implementation details & development workflow)
+
+Architecture and data
+
+- YouthConnect is a static front-end site. Content can be embedded directly in HTML, loaded from a local JSON file, or fetched from a small API if you integrate one.
+- Layout is mobile-first using CSS for responsiveness. JavaScript is used for UI interactions (search, filter, and dynamic rendering).
+
+Development workflow
+
+1. Edit or add HTML files for new pages.
+2. Place shared styles in `css/` and scripts in `js/`.
+3. If you add data as JSON, put it in `assets/data/` (create the folder if it doesn't exist) and fetch it from `js/`.
+4. Test locally by opening `index.html` or serving the directory with a static server.
+
+Suggested improvements and how to implement them
+
+- Add persistent data storage: integrate a small backend (Firebase, Supabase, or a simple REST API) and switch the data loading code to request remote JSON.
+- Accessibility improvements: ensure semantic HTML, ARIA roles where appropriate, and keyboard navigation for interactive components.
+- Unit/UI tests: add basic tests using a headless browser or a testing library (Jest + jsdom for logic; Playwright or Cypress for end-to-end UI checks).
+
+If you'd like, I can:
+- Add a CONTRIBUTORS.md with a template for contributions.
+- Create a simple JSON data example and update the code to load it.
+- Add an MIT LICENSE file for you.
+
+Tell me which of those to add next and I’ll make the changes.
