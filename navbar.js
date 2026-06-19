@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-=======
 document.addEventListener("DOMContentLoaded", () => {
   const loggedOutUI = document.getElementById("logged-out-ui");
   const loggedInUI = document.getElementById("logged-in-ui");
